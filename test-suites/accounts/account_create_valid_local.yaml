@@ -2,7 +2,7 @@
 # Validates project creation with valid data.
 
 authors:
-  - Mohammed Shoukath Ali
+  - shahanawazali
 
 endpoint: /accounts
 method: POST
@@ -21,30 +21,26 @@ testCases:
   - id: 1
     body: '{
         "name": "{{@Random | 3}}",
-        "accountType": "Local",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "accountType": "Local"
+       
      }'
   - id: 2
     body: '{
         "name": "Test-{{@Random | 6}}",
-        "accountType": "Local",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "accountType": "Local"
+       
      }'
   - id: 3
     body: '{
         "name": "Test-{{@Random | 12}}",
-        "accountType": "Local",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "accountType": "Local"
+     
      }'
   - id: 4
     body: '{
         "name": "Test-{{@Random | 24}}",
-        "accountType": "Local",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "accountType": "Local"
+     
      }'
 
 assertions:
