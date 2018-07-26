@@ -20,27 +20,27 @@ auth: Default
 testCases:
   - id: 1
     body: '{
-        "name": "{{@Random | 3}}",
+        "name": "Init-{{@Random | 6}}",
         "accountType": "Slack",
-         "channel":"#ENGINEERING"
+        "secretKey": "{{@Random | 20}}"
      }'
   - id: 2
     body: '{
-        "name": "Test-{{@Random | 6}}",
+       "name": "Init-{{@Random | 12}}",
         "accountType": "Slack",
-        "channel":"#ENGINEERING"
+        "secretKey": "{{@Random | 24}}"
      }'
   - id: 3
     body: '{
-        "name": "Test-{{@Random | 12}}",
+       "name": "Init-{{@Random | 6}}",
         "accountType": "Slack",
-        "channel":"#ENGINEERING"
+        "secretKey": "{{@Random | 8}}"
      }'
   - id: 4
     body: '{
-        "name": "Test-{{@Random | 24}}",
+        "name": "Init-{{@Random | 3}}",
         "accountType": "Slack",
-        "channel":"#ENGINEERING"
+        "secretKey": "{{@Random | 4}}"
      }'
 
 assertions:
@@ -48,7 +48,8 @@ assertions:
   - "@Response.errors == false"
   - "@Response.data.name == @Request.name"
   - "@Response.data.accountType == @Request.accountType"
-  - "@Response.data.channel == @Request.channel"
+  - "@Response.data.accessKey == @Request.accessKey"
+  - "@Response.data.secretKey == EMPTY"
   
 
 cleanup:
