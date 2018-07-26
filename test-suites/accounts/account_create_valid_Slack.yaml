@@ -29,22 +29,19 @@ testCases:
     body: '{
         "name": "Test-{{@Random | 6}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "channel":"#ENGINEERING"
      }'
   - id: 3
     body: '{
         "name": "Test-{{@Random | 12}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "channel":"#ENGINEERING"
      }'
   - id: 4
     body: '{
         "name": "Test-{{@Random | 24}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "channel":"#ENGINEERING"
      }'
 
 assertions:
