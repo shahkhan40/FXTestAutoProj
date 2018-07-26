@@ -22,8 +22,7 @@ testCases:
     body: '{
         "name": "{{@Random | 3}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+         "channel":"#ENGINEERING"
      }'
   - id: 2
     body: '{
@@ -49,8 +48,8 @@ assertions:
   - "@Response.errors == false"
   - "@Response.data.name == @Request.name"
   - "@Response.data.accountType == @Request.accountType"
-  - "@Response.data.accessKey == @Request.accessKey"
-  - "@Response.data.secretKey != @Request.secretKey"
+  - "@Response.data.channel == @Request.channel"
+  
 
 cleanup:
   - account_delete
