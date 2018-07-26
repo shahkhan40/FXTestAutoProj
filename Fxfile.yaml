@@ -86,7 +86,7 @@ jobs:
       account: Default_GitHub
     notifications: 
       - name: FXLabs_QA/TESTSHASLACK
-        channel: #ENGINEERING
+        channel: #QAENGINEERING
         account: aslack
       - name: FXLabs/Dev-Email-Notification
         # enter your email
