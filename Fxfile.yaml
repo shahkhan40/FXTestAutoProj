@@ -85,9 +85,9 @@ jobs:
       url: <<changeme>>
       account: Default_GitHub
     notifications: 
-      - name: FXLabs/Dev-Slack-Notification
-        channel: <<changeme>>
-        account: Default_Slack
+      - name: FXLabs_QA/TESTSHASLACK
+        channel: #ENGINEERING
+        account: aslack
       - name: FXLabs/Dev-Email-Notification
         # enter your email
         to: <<changeme>>
