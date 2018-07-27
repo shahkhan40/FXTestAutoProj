@@ -1,7 +1,7 @@
 ---
 # Validates Account creation with invalid data.
 
-authors:BitBucket
+authors:
   - shahanawaz ali
 
 endpoint: /accounts
